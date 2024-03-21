@@ -13,5 +13,12 @@ public class Main {
         Integer horasTrabajadas = input.nextInt();
         Double sueldoPorHora = input.nextDouble();
         Double totalACobrar;
+
+        if (horasTrabajadas > 180) {
+            totalACobrar = horasTrabajadas * sueldoPorHora + (horasTrabajadas - 180) * (sueldoPorHora * 1.50);
+        } else {
+            totalACobrar = horasTrabajadas * sueldoPorHora;
+        }
+        System.out.println(totalACobrar);
     }
 }
